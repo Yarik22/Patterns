@@ -20,11 +20,11 @@ export const patterns = [
     type: Patterns.Structural,
     fn: flyweight,
   },
-  // {
-  //   pattern: "Composite",
-  //   type: Patterns.Structural,
-  //   fn: composite,
-  // },
+  {
+    pattern: "Composite",
+    type: Patterns.Structural,
+    fn: composite,
+  },
   {
     pattern: "Strategy",
     type: Patterns.Behavioral,
