@@ -1,17 +1,9 @@
-abstract class Shape {
-  calculateArea() {
-    console.log(
-      `The area of the shape is ${this.calculateArea()} square units.`
-    );
-  }
+export abstract class Shape {
+  abstract calculateArea(): number;
 }
 
-abstract class Volume extends Shape {
-  calculateVolume() {
-    console.log(
-      `The volume of the figure is ${this.calculateVolume()} cubic units.`
-    );
-  }
+export abstract class Volume extends Shape {
+  abstract calculateVolume(): number;
 }
 
 export class Square extends Shape {
@@ -40,7 +32,7 @@ export class Sphere extends Volume {
   }
 
   calculateArea(): number {
-    return 4 * Math.PI * this.radius * this.radius;
+    return 4 * Math.PI * this.radius ** 2;
   }
 
   calculateVolume(): number {

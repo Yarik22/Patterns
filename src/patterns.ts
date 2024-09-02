@@ -1,5 +1,6 @@
 import {
   composite,
+  facade,
   flyweight,
   iterator,
   prototype,
@@ -29,6 +30,11 @@ export const patterns = [
     pattern: "Composite",
     type: Patterns.Structural,
     fn: composite,
+  },
+  {
+    pattern: "Facade",
+    type: Patterns.Structural,
+    fn: facade,
   },
   {
     pattern: "Strategy",
