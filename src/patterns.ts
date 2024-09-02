@@ -1,7 +1,12 @@
-import { flyweight, prototype, singleton, strategy } from "./design";
-import { iterator } from "./design/behavioral/Iterator";
-import { composite } from "./design/structural/Composite";
-import { AnsiColor } from "./enums/Colours";
+import {
+  composite,
+  flyweight,
+  iterator,
+  prototype,
+  singleton,
+  strategy,
+  templateMethod,
+} from "./design";
 import { Patterns } from "./enums/Patterns";
 
 export const patterns = [
@@ -34,5 +39,10 @@ export const patterns = [
     pattern: "Iterator",
     type: Patterns.Behavioral,
     fn: iterator,
+  },
+  {
+    pattern: "TemplateMethod",
+    type: Patterns.Behavioral,
+    fn: templateMethod,
   },
 ];
