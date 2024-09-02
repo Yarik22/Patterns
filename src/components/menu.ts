@@ -39,7 +39,7 @@ const generateOptionsString = (): string => {
 
 export const displayPatternMenu = async (): Promise<void> => {
   while (true) {
-    const options = `----------------------------------------${
+    const options = `----------------------------------------\n${
       AnsiColor.Reset
     }What pattern example do you want to see?${
       AnsiColor.Reset
