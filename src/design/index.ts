@@ -1,8 +1,12 @@
 export { singleton } from "./creational/Singleton";
 export { prototype } from "./creational/Prototype";
+export { factoryMethod } from "./creational/FactoryMethod";
+export { abstractFactory } from "./creational/AbstractFactory";
 export { flyweight } from "./structural/Flyweight";
 export { composite } from "./structural/Composite";
+export { decorator } from "./structural/Decorator";
 export { facade } from "./structural/Facade";
 export { strategy } from "./behavioral/Strategy";
 export { iterator } from "./behavioral/Iterator";
 export { templateMethod } from "./behavioral/TemplateMethod";
+export { observer } from "./behavioral/Observer";

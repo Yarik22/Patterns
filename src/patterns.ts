@@ -1,8 +1,12 @@
 import {
+  abstractFactory,
   composite,
+  decorator,
   facade,
+  factoryMethod,
   flyweight,
   iterator,
+  observer,
   prototype,
   singleton,
   strategy,
@@ -22,6 +26,16 @@ export const patterns = [
     fn: prototype,
   },
   {
+    pattern: "Factory Method",
+    type: Patterns.Creational,
+    fn: factoryMethod,
+  },
+  {
+    pattern: "Abstract Factory",
+    type: Patterns.Creational,
+    fn: abstractFactory,
+  },
+  {
     pattern: "Flyweiht",
     type: Patterns.Structural,
     fn: flyweight,
@@ -37,6 +51,11 @@ export const patterns = [
     fn: facade,
   },
   {
+    pattern: "Decorator",
+    type: Patterns.Structural,
+    fn: decorator,
+  },
+  {
     pattern: "Strategy",
     type: Patterns.Behavioral,
     fn: strategy,
@@ -47,8 +66,13 @@ export const patterns = [
     fn: iterator,
   },
   {
-    pattern: "TemplateMethod",
+    pattern: "Template Method",
     type: Patterns.Behavioral,
     fn: templateMethod,
+  },
+  {
+    pattern: "Observer",
+    type: Patterns.Behavioral,
+    fn: observer,
   },
 ];
