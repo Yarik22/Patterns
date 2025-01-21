@@ -4,16 +4,16 @@ interface Team {
 
 class TeamA implements Team {
   getItems(): void {
-    console.log("Spawn players");
-    console.log("Spawn weapons");
-    console.log("Spawn spike");
+    console.log("Spawn players A");
+    console.log("Spawn weapons A");
+    console.log("Spawn spike A");
   }
 }
 
 class TeamB implements Team {
   getItems(): void {
-    console.log("Spawn players");
-    console.log("Spawn weapons");
+    console.log("Spawn players B");
+    console.log("Spawn weapons B");
   }
 }
 
@@ -39,8 +39,8 @@ class SideB extends Side {
 export const factoryMethod = () => {
   const sideA = new SideA();
   const sideB = new SideB();
-  console.log("Team A");
+  console.log("Fabric created team A");
   sideA.createTeam();
-  console.log("Team B");
+  console.log("Fabric created team B");
   sideB.createTeam();
 };

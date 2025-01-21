@@ -1,8 +1,9 @@
 import { it } from "node:test";
 import { AnsiColor } from "../enums/Colours";
-import { Patterns } from "../enums/Patterns";
-import { patterns } from "../patterns";
+import { PatternTypes } from "../enums/Patterns";
+import { patterns } from "../utils/patterns";
 import * as readline from "readline";
+import { descriptions } from "../utils/descriptions";
 
 const rl = readline.createInterface({
   input: process.stdin,
@@ -13,13 +14,13 @@ const askQuestion = (query: string): Promise<string> => {
   return new Promise((resolve) => rl.question(query, resolve));
 };
 
-const getColorByType = (type: Patterns): string => {
+const getColorByType = (type: PatternTypes): string => {
   switch (type) {
-    case Patterns.Creational:
+    case PatternTypes.Creational:
       return AnsiColor.Green;
-    case Patterns.Structural:
+    case PatternTypes.Structural:
       return AnsiColor.Blue;
-    case Patterns.Behavioral:
+    case PatternTypes.Behavioral:
       return AnsiColor.Yellow;
     default:
       return AnsiColor.Reset;
@@ -61,9 +62,14 @@ export const displayPatternMenu = async (): Promise<void> => {
     if (selectedPattern) {
       const color = getColorByType(selectedPattern.type);
       console.log(
-        `\n${color}You selected: ${selectedPattern.pattern}${AnsiColor.Reset}`
+        `\n${color}You have selected: ${selectedPattern.pattern}${AnsiColor.Reset}`
       );
       selectedPattern.fn();
+      console.log(
+        `${color}Description:\n${descriptions[selectedPattern.pattern]}${
+          AnsiColor.Reset
+        }`
+      );
     } else {
       console.log(
         `${AnsiColor.Red}Invalid choice, please try again.${AnsiColor.Reset}`

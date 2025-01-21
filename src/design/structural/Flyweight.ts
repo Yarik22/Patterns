@@ -11,7 +11,7 @@ class WeaponType {
 }
 
 class WeaponFactory {
-  protected static weaponTypes: WeaponType[] = [];
+  public static weaponTypes: WeaponType[] = [];
 
   static getWeaponType(
     ammunition: number,
@@ -66,4 +66,5 @@ export const flyweight = () => {
   team.createPlayer("Player2", 50, "M16", 2000);
   team.createPlayer("Player3", 30, "AK-47", 1500);
   team.info();
+  WeaponFactory.weaponTypes.forEach((v) => console.log(v.name));
 };
